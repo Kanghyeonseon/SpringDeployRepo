@@ -65,8 +65,8 @@ public class SampleController {
 		}
 	}
 	
-	//@InitBinder¸¦ ÀÌ¿ëÇØ¼­ Ä¿½ºÅÒ µ¥ÀÌÅÍ Å¸ÀÔ º¯È¯À» Ã³¸®ÇÒ ¼ö ÀÖÀ½
-	//new CustomDateEditor(dateFormat,true) //true : ³Î°ªÇã¿ë , false : ³Î°ª Çã¿ëÇÏÁö x
+	//@InitBinderï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	//new CustomDateEditor(dateFormat,true) //true : ï¿½Î°ï¿½ï¿½ï¿½ï¿½ , false : ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ x
 
 //	@InitBinder
 //	public void initBinder(WebDataBinder binder) {
@@ -126,41 +126,7 @@ public class SampleController {
 		return "redirect:result";
 	}	
 	
-	@GetMapping("/result")
-	public void result(Model model) {
-		log.info("URL : /result....");
-		BoardDTO dto = new BoardDTO().builder()
-					.no(1010)
-					.content("³»¿ë³»¿ë")
-					.writer("ÀÛ¼ºÀÚ~")
-					.build();
-		
-		model.addAttribute("board", dto);
-					
-	}	
-	
-	
-	@GetMapping("/objectTest")
-	public @ResponseBody SampleDTO ObjectTest() {
-		SampleDTO dto = new SampleDTO();
-		dto.setName("È«±æµ¿");
-		dto.setAge(55);
-		
-		return dto;
-	}
 
-	@GetMapping("/objectTest2")
-	public ResponseEntity<String> ObjectTest2() {
-		SampleDTO dto = new SampleDTO();
-		dto.setName("È«±æµ¿");
-		dto.setAge(55);
-		
-		HttpHeaders header = new HttpHeaders();
-		header.add("content-Type", "application/json;charset=utf-8");
-		
-		return new ResponseEntity<String>(dto.toString(),header,HttpStatus.OK);
-	}	
-	
 	
 	
 	

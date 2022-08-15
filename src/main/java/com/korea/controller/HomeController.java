@@ -43,9 +43,9 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		dto.setName("全辨悼");
+		dto.setName("頃橅晿");
 		dto.setAge("55");
-		dto.setAddr("林家林家");
+		dto.setAddr("順疙樃");
 
 		log.info("DTO : " +dto);
 		
