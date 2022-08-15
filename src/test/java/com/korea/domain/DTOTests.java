@@ -19,13 +19,11 @@ public class DTOTests {
 	@Test
 	public void test() {	
 		
-		//TestDTO dto = new TestDTO("全辨悼","44","措备");
-		//dto.setAddr("匡魂");
 		
 		TestDTO dto = TestDTO.builder()
 				.age("55")
-				.name("全辨悼")
-				.addr("林家林家")
+				.name("abcd")
+				.addr("addr")
 				.build();
 		System.out.println(dto);
 		 
@@ -33,7 +31,7 @@ public class DTOTests {
 	
 	@Test
 	public void test2() {
-		testdto.setName("全辨悼");
+		testdto.setName("name");
 		log.info("testDTO : " + testdto);
 		
 	}

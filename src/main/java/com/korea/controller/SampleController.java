@@ -65,15 +65,6 @@ public class SampleController {
 		}
 	}
 	
-	//@InitBinder�� �̿��ؼ� Ŀ���� ������ Ÿ�� ��ȯ�� ó���� �� ����
-	//new CustomDateEditor(dateFormat,true) //true : �ΰ���� , false : �ΰ� ������� x
-
-//	@InitBinder
-//	public void initBinder(WebDataBinder binder) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
-//		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(df,false));
-//	}
-	
 	
 	
 	@GetMapping("/test7")
